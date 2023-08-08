@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter/material.dart';
+import 'package:qiita_search/widgets/article_container.dart';
 
 import '../models/article.dart';
 
@@ -40,8 +41,8 @@ class _SearchScreenState extends State<SearchScreen> {
                 setState(() => articles = results);
               },
             ),
-            // 検索結果一覧
           ),
+          const ArticleContainer(),
         ],
       ),
     );
